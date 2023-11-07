@@ -1,0 +1,36 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Feed</title>
+  </head>
+  <body>
+    <h1>Feed</h1>
+    <ul>
+      <% for (const post of posts) { %>
+      <li>
+        <h3><%= post.title %></h3>
+        <p><%= post.description %></p>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feed</title>
+  </head>
+  <body>
+    <h1>Feed</h1>
+    <ul>
+      <% for (const postWithAuthor of posts) { %>
+      <li>
+        <h3><%= postWithAuthor.post.title %></h3>
+        <p><%= postWithAuthor.post.description %></p>
+        <p>Author: <%= postWithAuthor.author.name %></p>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>

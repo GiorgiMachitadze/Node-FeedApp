@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <% if (currentUser) { %>
+    <p>Welcome, <%= currentUser.name %>!</p>
+    <a href="/signout">Sign Out</a>
+    <% } else { %>
+    <form method="post" action="/login">
+      <input type="text" name="email" placeholder="Email" />
+      <input type="password" name="password" placeholder="Password" />
+      <button type="submit">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="/register">Register</a></p>
+    <% } %>
+  </body>
+</html>
